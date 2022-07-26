@@ -1,0 +1,11 @@
+<html>
+    <head></head>
+    <body>
+        <form method="POST" action={% url 'upload_page' %} enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="file">Upload XML file:</label>
+            <input type="file" name="file" />
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
